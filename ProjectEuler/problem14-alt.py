@@ -1,3 +1,10 @@
+'''
+Name: Longest Collatz sequence
+Problem URL: https://projecteuler.net/problem=14
+Date Completed: May 2021 
+Description: A iterative solution to problem 14 vs the math solution in the other file.
+'''
+
 import time
 
 start = time.time()

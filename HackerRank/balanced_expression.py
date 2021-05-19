@@ -1,4 +1,8 @@
 '''
+Name: Balanced Expressions
+Date Completed: May 12, 2021
+
+Description: 
 Validate that the brackets in the string are correct.
 Possible brackets are: {}, [], ()
 '''

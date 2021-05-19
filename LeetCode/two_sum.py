@@ -1,6 +1,9 @@
 '''
-Tests:
+Name: Two Sum
+Problem URL: https://leetcode.com/problems/two-sum/
+Date Completed: May 2021
 
+Test Cases:
 [-1,-2,-3,-4,-5]
 -8
 
@@ -24,7 +27,6 @@ if __name__ == "__main__":
     nums = [-1, -2, -3, -4, -5, 7, 99, -12]
     target = -8
 
-    result = dict((v, i) for i, v in enumerate(nums))
-
-    # result = twoSum(nums, target)
+    #result = dict((v, i) for i, v in enumerate(nums))
+    result = twoSum(nums, target)
     print(result)

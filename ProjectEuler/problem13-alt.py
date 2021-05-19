@@ -1,6 +1,11 @@
-"""
-This is an alternative solution that keeps the numbers as strings so they can be as big as your computer can handle and not limited by the size of an int. This was a personal challenge and not the best solution to the problem fyi.
-"""
+'''
+Name: Large sum
+Problem URL: https://projecteuler.net/problem=13
+Date Completed: May 2021 
+Description: This is an alternative solution that keeps the numbers as strings so they
+can be as big as your computer can handle and not limited by the size of an int. 
+This was a personal challenge and not the best solution to the problem fyi.
+'''
 
 n = []
 with open("problem13.in", "r") as f:

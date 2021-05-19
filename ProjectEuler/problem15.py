@@ -1,6 +1,11 @@
 """
-Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
 
+Name: Lattice paths
+Problem URL: https://projecteuler.net/problem=15
+Date Completed: May 2021 
+
+Description:
+Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
 
 (x + y)! / x!y! = PATHS
 

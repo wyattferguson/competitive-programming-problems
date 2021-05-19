@@ -1,4 +1,9 @@
 """
+Name: List Comprehension
+Problem URL: https://www.hackerrank.com/challenges/list-comprehensions/problem
+Date Completed: May 12, 2021
+
+Test Case:
 12
 insert 0 5
 insert 1 10

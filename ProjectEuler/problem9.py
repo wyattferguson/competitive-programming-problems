@@ -1,7 +1,9 @@
 '''
-Special Pythagorean triplet
-https://projecteuler.net/problem=9
+Name: Special Pythagorean triplet
+Problem URL: https://projecteuler.net/problem=9
+Date Completed: 2019 
 
+Description:
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
 
 a2 + b2 = c2
@@ -14,18 +16,19 @@ Find the product abc.
 
 from math import sqrt
 
+
 def main():
     prod = 1000
-    for a in range(1,prod):
-        for b in range(1,a):
+    for a in range(1, prod):
+        for b in range(1, a):
             c = sqrt(a**2 + b**2)
             # skip non-natural numbers
             if c.is_integer():
                 if a + b + c == prod:
-                    print(a,b,c)
+                    print(a, b, c)
                     print(int(a*b*c))
                     exit()
-                       
+
 
 if __name__ == "__main__":
     main()
