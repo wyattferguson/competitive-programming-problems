@@ -1,3 +1,9 @@
+'''
+Name: Check Array Formation Through Concatenation
+Problem URL: https://leetcode.com/problems/check-array-formation-through-concatenation/
+Date Completed: May 18, 2021
+'''
+
 
 def canFormArray(arr, pieces):
     hld = []
