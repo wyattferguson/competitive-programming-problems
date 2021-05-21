@@ -14,7 +14,7 @@ class Stack:
     def __init__(self):
         self.head = None
 
-    def push(self, n):
+    def push(self, n=0):
         node = Node(n)
         if self.head is None:
             self.head = node
@@ -32,12 +32,9 @@ class Stack:
         return val
 
     def peek(self):
-        if self.head == None:
-            return None
+        return self.head.val if self.head else None
 
-        return self.head.val
-
-    def __str__(self) -> str:
+    def __str__(self):
         stack = []
         cur = self.head
         while cur:
