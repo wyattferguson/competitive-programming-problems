@@ -22,7 +22,6 @@ Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing posi
 
 
 def findKthPositive(arr, k):
-    #missing = [x for x in range(1, max(arr)+k+1) ]
     cnt = 0
     for x in range(1, max(arr)+k+1):
         if x not in arr:
