@@ -13,6 +13,7 @@ Elvis Stojko
 Evgeni Plushenko
 Kristi Yamaguchi
 
+Output:
 Case #1: 1
 Case #2: 0
 '''
@@ -22,7 +23,7 @@ def solve(names=[]):
     cost = 0
     for a in range(len(names) - 1):
         b = a+1
-        if names[a] != names[b] and names[b] < names[a]:
+        if names[b] < names[a]:
             names[a], names[b] = names[b], names[a]
             cost += 1
 
