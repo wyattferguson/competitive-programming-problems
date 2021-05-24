@@ -22,6 +22,12 @@ f g
 b f
 
 1
+3
+Dead_Bowie Fake_Thomas_Jefferson
+Fake_Thomas_Jefferson Fury_Leika
+Fury_Leika Dead_Bowie
+
+1
 1
 Dead_Bowie Fake_Thomas_Jefferson
 
@@ -35,8 +41,17 @@ Case #3: No
 from collections import defaultdict
 
 
-def has_cycle(node, edges):
-    pass
+def has_cycle(node, edges, graph):
+    if node in edges:
+        return True
+
+    for n in edges[:]:
+        if graph[n]:
+            next = graph[n]
+            #print(node, next)
+            return has_cycle(node, next, graph)
+
+    return False
 
 
 def solve(pairs):
@@ -44,9 +59,8 @@ def solve(pairs):
     for p1, p2 in pairs:
         graph[p1].append(p2)
 
-    for n, e in graph.items():
-        print(n, e)
-        if has_cycle(n, e):
+    for node in graph.keys():
+        if has_cycle(node, graph[node][:], graph):
             return "No"
 
     return "Yes"
