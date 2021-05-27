@@ -41,17 +41,23 @@ Case #3: No
 from collections import defaultdict
 
 
-def has_cycle(node, edges, graph):
-    if node in edges:
-        return True
+def has_cycle(g):
+    path = set()
+    visited = set()
 
-    for n in edges[:]:
-        if graph[n]:
-            next = graph[n]
-            #print(node, next)
-            return has_cycle(node, next, graph)
+    def visit(vertex):
+        if vertex in visited:
+            return False
+        visited.add(vertex)
+        path.add(vertex)
+        print(path)
+        for neighbour in g.get(vertex, ()):
+            if neighbour in path or visit(neighbour):
+                return True
+        path.remove(vertex)
+        return False
 
-    return False
+    return any(visit(v) for v in g)
 
 
 def solve(pairs):
@@ -59,9 +65,8 @@ def solve(pairs):
     for p1, p2 in pairs:
         graph[p1].append(p2)
 
-    for node in graph.keys():
-        if has_cycle(node, graph[node][:], graph):
-            return "No"
+    if has_cycle(graph):
+        return "No"
 
     return "Yes"
 
