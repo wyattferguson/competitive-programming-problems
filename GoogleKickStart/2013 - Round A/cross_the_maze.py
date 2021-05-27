@@ -32,13 +32,20 @@ EESS
 '''
 
 
+def print_m(m):
+    for r in m:
+        print(r)
+    print("\n")
+
+
 def solve(m, sx, sy, ex, ey, size):
     path = []
     facing = ['N', 'E', 'S', 'W']
     last_move = 'N'
-    for _ in range(10000):
-        m[sy][sx] = last_move
-
+    m[ex][ey] = "X"
+    for step in range(10000):
+        m[sy][sx] = step
+        print_m(m)
         for dir in facing[:]:
             if (sx+1) < size and m[sy][sx+1] != '#' and dir == 'E':
                 last_move = 'E'
