@@ -31,8 +31,8 @@ def solve(books):
 
     result = []
     for i in books:
-        book = str(a.pop(0) if i % 2 else b.pop(0))
-        result.append(book)
+        book = a.pop(0) if i % 2 else b.pop(0)
+        result.append(str(book))
     return result
 
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     T = int(input())
     for case in range(1, T+1):
         N = int(input())
-        nums = list(map(int, input().split()))
+        books = list(map(int, input().split()))
 
-        result = solve(nums)
+        result = solve(books)
         print(f"Case #{case}: {' '.join(result)}")
