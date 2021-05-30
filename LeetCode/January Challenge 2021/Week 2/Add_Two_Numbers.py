@@ -54,11 +54,9 @@ class Solution:
             while node:
                 k += str(node.val)
                 node = node.next
-            return k[::-1]
+            return int(k[::-1])
 
-        a = extract(list1)
-        b = extract(list2)
-        total = int(a) + int(b)
+        total = extract(list1) + extract(list2)
 
         ll = None
         for v in str(total):
