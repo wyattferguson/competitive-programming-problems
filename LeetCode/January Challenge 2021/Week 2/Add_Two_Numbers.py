@@ -1,7 +1,7 @@
 """
 Name: Add Two Numbers
-Problem URL: https://leetcode.com/problems/add-two-numbers/
-Date Completed: May 15, 2021
+Problem URL: https://bit.ly/3c3xjhq
+Date Completed: May 29, 2021
 
 Description:
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
@@ -34,6 +34,7 @@ Output: [8,9,8,5]
 Explanation: 942 + 9465 = 10407
 Expected: [7,0,4,0,1]
 
+
 """
 
 
@@ -46,40 +47,20 @@ class ListNode:
         return str(self.val)
 
 
-def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
-    sum1 = ""
-    while l1:
-        sum1 += str(l1.val)
-        l1 = l1.next
+class Solution:
+    def addTwoNumbers(self, list1: ListNode, list2: ListNode):
+        def extract(node):
+            k = ""
+            while node:
+                k += str(node.val)
+                node = node.next
+            return k[::-1]
 
-    sum2 = ""
-    while l2:
-        sum2 += str(l2.val)
-        l2 = l2.next
+        a = extract(list1)
+        b = extract(list2)
+        total = int(a) + int(b)
 
-    fin = int(sum1) + int(sum2)
-
-    result = None
-    for n in range(len(str(fin))):
-        result = ListNode(str(fin)[n], result)
-
-    return result
-
-
-if __name__ == "__main__":
-    # setting up test cases in Linked List form
-    list1 = [2, 4, 9]
-    list2 = [5, 6, 4, 9]
-
-    l1 = None
-    for n in list1:
-        l1 = ListNode(n, l1)
-
-    l2 = None
-    for n in list2:
-        l2 = ListNode(n, l2)
-
-    results = addTwoNumbers(l1, l2)
-    while results:
-        print(results.val)
-        results = results.next
+        ll = None
+        for v in str(total):
+            ll = ListNode(v, ll)
+        return ll

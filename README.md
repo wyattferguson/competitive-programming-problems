@@ -2,13 +2,9 @@
 
 This repo is a collection of the competitive programming problems I've solved. Its kinda like a log of my learning while trying to improve at competitive programming. So not all the solutions are optimal, and some are just bad, but its more about working through and learning from each problem.
 
-## :octocat: CP Profiles
+## :octocat: Platforms
 
-- [Exercism](https://exercism.io/profiles/wyattferguson)
-- [CodeForces](https://codeforces.com/profile/wyattf)
-- [CoderByte](https://www.coderbyte.com/profile/wyattferguson)
-- [LeetCode](https://leetcode.com/wyattf/)
-- [HackerRank](https://www.hackerrank.com/0x8675309)
+Platforms: Exercism, CodeForces, CoderByte, LeetCode, Google KickStart, and HackerRank
 
 ## :postbox: Contact & Support
 
