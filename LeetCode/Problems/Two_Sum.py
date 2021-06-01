@@ -27,6 +27,5 @@ if __name__ == "__main__":
     nums = [-1, -2, -3, -4, -5, 7, 99, -12]
     target = -8
 
-    #result = dict((v, i) for i, v in enumerate(nums))
     result = twoSum(nums, target)
     print(result)
