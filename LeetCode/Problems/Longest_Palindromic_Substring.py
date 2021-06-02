@@ -21,26 +21,36 @@ Output: "a"
 Example 4:
 Input: s = "ac"
 Output: "a"
+
+Example 5:
+s = "abbcccbbbcaaccbababcbcabca"
+output: bbcccbb
+Runtime of the program is 0.0010001659393310547
+
 '''
 
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        def is_pal(s):
-            return True if s == s[::-1] else False
+        result = s[0]
+        N = len(s) - 1
+        limit = 1
+        # Start with window at max size of the string
+        for l in range(N):
+            for r in range(N, l, -1):
+                # if the window gets smaller then size of the current max palindrome move on
+                if (r-l) < limit:
+                    break
 
-        def dive(s, l, r):
-            if l > r or r <= 0:
-                return ""
+                # Check that the ends equal before doing more complicated checks.
+                if s[l] == s[r]:
+                    cur = s[l:r+1]
+                    # check if palindrome and its the longest we've seen
+                    if cur == cur[::-1] and len(cur) > limit:
+                        result = cur
+                        limit = len(result)
 
-            if is_pal(s[l:r]):
-                return s[l:r]
-
-            left = dive(s, l+1, r)
-            right = dive(s, l, r-1)
-            return left if len(left) > len(right) else right
-
-        return dive(s, 0, len(s))
+        return result
 
 
 if __name__ == "__main__":
