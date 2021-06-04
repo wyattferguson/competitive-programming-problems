@@ -35,17 +35,14 @@ class Solution:
         result = s[0]
         N = len(s) - 1
         limit = 1
-        # Start with window at max size of the string
         for l in range(N):
+            if (N-l) < limit:
+                break
             for r in range(N, l, -1):
-                # if the window gets smaller then size of the current max palindrome move on
                 if (r-l) < limit:
                     break
-
-                # Check that the ends equal before doing more complicated checks.
                 if s[l] == s[r]:
                     cur = s[l:r+1]
-                    # check if palindrome and its the longest we've seen
                     if cur == cur[::-1] and len(cur) > limit:
                         result = cur
                         limit = len(result)
