@@ -40,11 +40,11 @@ class Solution:
             else:
                 return False
 
-        return False if stack else True
+        return not stack
 
 
 if __name__ == "__main__":
-    s = "){"
+    s = "(){}"
 
     solve = Solution()
     print(solve.isValid(s))
