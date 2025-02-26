@@ -1,4 +1,4 @@
-# :rocket: Competitive Programming Problems in Python & Rust
+# :rocket: Competitive Programming Problems in Python
 
 This repo is a collection of the competitive programming problems I've solved. Its kinda like a log of my learning while trying to improve at competitive programming. So not all the solutions are optimal, and some are just bad, but its more about working through and learning from each problem.
 
